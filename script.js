@@ -597,6 +597,19 @@ function acceptInvitation() {
   }
 }
 
+function acceptInvitational() {
+  const popup = document.getElementById("welcomePopup");
+  popup.classList.add("hidden"); // Sembunyikan pop-up
+  
+  // Cari elemen bagian game (pastikan section game lu punya class/id, misal class="game-section")
+  const quranSection = document.querySelector(".quran-section");
+  
+  if (quranSection) {
+    // Geser halaman secara halus (smooth scroll) ke arah bagian game
+    quranSection.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 function closePopup() {
   const popup = document.getElementById("welcomePopup");
   popup.classList.add("hidden"); // Cukup tutup pop-up kalau user pilih nanti
