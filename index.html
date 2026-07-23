@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ONZEXXI 🔥 12-6 | MAN 1 LANGKAT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Pop-up Greeting Awal -->
+<div id="welcomePopup" class="popup-overlay">
+  <div class="popup-card">
+    <div class="popup-icon">👋</div>
+    <h3>Hmm, mau ngapain nih?</h3>
+    <p>Main game yuk?</p>
+    <div class="popup-buttons">
+      <button id="btnYuk" onclick="acceptInvitation()">Yuk! 🎮</button>
+      <button id="btnNanti" onclick="closePopup()">Nanti deh</button>
+    </div>
+  </div>
+</div>
+
+
+<body>
+
+  <!-- Background decor -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  
+  <nav class="navbar">
+  <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="logo" style="text-decoration: none; color: inherit; cursor: pointer;">
+    🔥 ONZEXXI
+  </a>
+  <div class="nav-right">
+    <button id="themeToggle" class="theme-toggle" title="Ganti tema">🌙</button>
+    <button id="hamburger" class="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+
+  <!-- HEADER -->
+  <header class="hero" id="home">
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <ul>
+        <li><a href="#home" class="menu-link">🏠 Beranda</a></li>
+        <li><a href="#struktur" class="menu-link">📋 Struktur Kelas</a></li>
+        <li><a href="#siswa" class="menu-link">👨‍🎓 Daftar Siswa</a></li>
+        <li><a href="#quran" class="menu-link">📖 Al - Qur'an</a></li>
+        <li><a href="#game" class="menu-link"> 🎮 Game</a></li>
+      </ul>
+    </div>
+    
+        <!-- LOGO LOVE -->
+    <div class="love-container">
+      <svg class="love-svg" viewBox="0 0 100 100">
+        <path class="love-path" d="M 50,30 C 50,10 20,0 10,20 C 0,40 20,60 50,90 C 80,60 100,40 90,20 C 80,0 50,10 50,30 Z" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+    
+    <!-- LOGO INFINITY PINDAH KE SINI (DI LUAR CONTENT, DI DALAM HERO) -->
+    <div class="infinity-container">
+      <svg class="infinity-svg" viewBox="0 0 200 100">
+        <path class="infinity-path" d="M 100,50 C 60,10 0,10 0,50 C 0,90 60,90 100,50 C 140,10 200,10 200,50 C 200,90 140,90 100,50 Z" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+    
+
+    <div class="hero-content">
+      <p class="hero-tag">MAN 1 LANGKAT</p>
+      
+      <!-- FOTO HERO -->
+      <div class="hero-img-container">
+        <img src="foto.jpg" alt="Foto Kelas ONZEXXI" class="hero-img">
+      </div>
+  
+      <h1 class="hero-title">ONZEXXI <span class="fire">🔥</span> 12-6</h1>
+      <p class="hero-sub">Satu Kelas, Satu Keluarga, Satu Tujuan.</p>
+      
+      <div class="hero-stats">
+        <div class="stat-box">
+          <span class="stat-number" id="studentCount">0</span>
+          <span class="stat-label">Siswa</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Wali Kelas</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Kelas XII</span>
+        </div>
+      </div>
+    </div> <!-- PENUTUP .hero-content -->
+
+    
+
+    <a href="#struktur" class="scroll-hint">click to scroll</a>
+
+  </header>
+
+  <main>
+    <!-- STRUKTUR KELAS -->
+    <section class="section" id="struktur">
+      <h2 class="section-title">Struktur Kelas</h2>
+      <p class="section-desc">Pengurus yang menjalankan roda kepemimpinan ONZEXXI 12-6</p>
+
+      <div class="wali-card">
+        <div class="wali-avatar">👩‍🏫</div>
+        <div class="wali-info">
+          <span class="wali-role">Wali Kelas</span>
+          <h3 class="wali-name">Dra. Umi Kalsum Pelawi</h3>
+        </div>
+      </div>
+
+      <div class="struktur-grid">
+        <div class="struktur-card">
+          <div class="struktur-icon">👑</div>
+          <span class="struktur-role">Ketua Kelas</span>
+          <h4 class="struktur-name">Abdul Hafiz</h4>
+        </div>
+        <div class="struktur-card">
+          <div class="struktur-icon">🛡️</div>
+          <span class="struktur-role">Wakil Ketua Kelas</span>
+          <h4 class="struktur-name">M. Irfan Hafiz</h4>
+        </div>
+        <div class="struktur-card">
+          <div class="struktur-icon">📝</div>
+          <span class="struktur-role">Sekretaris</span>
+          <h4 class="struktur-name">Siti Iqlima</h4>
+        </div>
+        <div class="struktur-card">
+          <div class="struktur-icon">💰</div>
+          <span class="struktur-role">Bendahara</span>
+          <h4 class="struktur-name">Amelia</h4>
+        </div>
+        <div class="struktur-card developer-card">
+          <div class="struktur-icon">👨‍💻</div>
+          <span class="struktur-role">Developer</span>
+          <h4 class="struktur-name">Najidla Azman</h4>
+        </div>
+      </div>
+    </section>
+    
+    <!-- DAFTAR SISWA -->
+    <section class="section" id="siswa">
+      <h2 class="section-title">Daftar Siswa</h2>
+      <p class="section-desc">30 siswa hebat yang mengisi cerita ONZEXXI 12-6</p>
+
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="🔍 Cari nama siswa..." class="search-input">
+      </div>
+
+      <div id="studentList" class="student-grid"></div>
+      <p id="noResult" class="no-result hidden">Nama siswa tidak ditemukan 😢</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>🔥 ONZEXXI 12-6 &mdash; MAN 1 LANGKAT</p>
+    <p class="footer-sub">Merendah Untuk Meroket 🚀✨</p>
+  </footer>
+
+  <button id="toTop" class="to-top hidden" title="Kembali ke atas">↑</button>
+  
+
+<section class="game-section" id="game">
+  <h2>Block Bash Arcade</h2>
+  <p>Gunakan tombol panah, WASD, mouse, atau geser layar HP untuk bermain!</p>
+  
+  <!-- PREVIEW CONTAINER SEBELUM GAME DIMULAI -->
+  <div id="gamePreview" class="game-preview-container">
+    <div class="preview-overlay-text">
+      <span>🎮 Siap Main?</span>
+    </div>
+    <!-- Canvas Preview (Opsional atau pakai gambar/elemen statis) -->
+    <div class="preview-mockup">
+      <div class="mock-bricks"></div>
+      <div class="mock-paddle"></div>
+      <div class="mock-ball"></div>
+    </div>
+    <button id="startBtn" onclick="startGame()">Mulai Game</button>
+  </div>
+
+  <!-- Container Game Fullscreen (yang udah kita buat sebelumnya) -->
+  <div id="gameOverlay" class="game-overlay">
+  <div class="game-container-full">
+    <div class="game-header-ui">
+      <span id="scoreBoard">Score: 0</span>
+      <button id="exitBtn" onclick="exitGame()">Keluar ✕</button>
+    </div>
+    
+    <!-- Area Canvas Game -->
+    <div style="position: relative;">
+      <canvas id="blockBashCanvas" width="480" height="320"></canvas>
+      
+      <!-- Pop-up Game Over di dalam Canvas -->
+      <div id="gameOverScreen" class="game-over-screen">
+        <h2>Game Over! 💀</h2>
+        <p id="finalScore">Skor Kamu: 0</p>
+        <button onclick="restartGame()">Coba Lagi 🔄</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Section Al-Qur'an Juz 30 -->
+<section class="quran-section" id="quran">
+  <div class="quran-header">
+    <h2>📖 Baca Juz 30</h2>
+    <p>Pilih surat pendek pilihan di Juz Amma</p>
+  </div>
+
+  <!-- Dropdown Pilihan Surat -->
+  <div class="quran-controls">
+    <select id="surahSelect" onchange="fetchSurah()">
+      <option value="" disabled selected>-- Pilih Surat Juz 30 --</option>
+      <!-- Daftar surat Juz 30 di-generate otomatis via JS -->
+    </select>
+  </div>
+
+  <!-- Container Menampilkan Ayat-ayat -->
+  <div id="quranContainer" class="quran-content-box">
+    <p class="quran-placeholder">Silakan pilih surat di atas untuk mulai membaca.</p>
+  </div>
+</section>
+
+
+<!-- Footer / Copyright Section -->
+<footer class="site-footer">
+  <p>&copy; 2026 Najidla Azman. All rights reserved.</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
