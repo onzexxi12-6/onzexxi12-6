@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>♟️ Catur | ONZEXXI 12-6</title>
+    <link rel="stylesheet" href="chess.css">
+</head>
+
+<body>
+    <!-- Hapus onclick dari button, kita pake event listener di JS -->
+    <div class="chess-page">
+
+        <!-- Ganti bagian music-wrap dengan ini -->
+        <div class="music-wrap">
+            <button id="musicBtn">
+                <span class="btn-icon">🎵</span>
+                <span class="btn-text">Putar Musik</span>
+            </button>
+        </div>
+
+        <!-- Hapus onclick dari button, kita pake event listener di JS -->
+        <audio id="bgMusic" src="audio.mp3" autoplay loop></audio>
+        <div class="chess-page-container">
+            <div class="chess-topbar">
+                <a href="index.html" class="chess-back">⬅ Kembali</a>
+                <button id="themeToggle" title="Ganti mode terang/gelap">☀️</button>
+            </div>
+
+            <h2 class="chess-title">♟️ Catur ONZEXXI</h2>
+            <p class="chess-subtitle">Mode 2 pemain (gantian) — klik bidak, lalu klik tujuan</p>
+
+            <div class="chess-panel">
+                <div class="chess-status-row">
+                    <span id="turnIndicator">⚪ Giliran Putih</span>
+                    <span id="statusText" class="status-text">Silakan jalan</span>
+                </div>
+
+                <div id="chessBoard"></div>
+
+                <div class="chess-captured">
+                    <div>
+                        <span class="captured-label">Tertangkap Putih</span>
+                        <span id="capturedByWhite"></span>
+                    </div>
+                    <div style="text-align:right;">
+                        <span class="captured-label">Tertangkap Hitam</span>
+                        <span id="capturedByBlack"></span>
+                    </div>
+                </div>
+
+                <button id="resetBtn">Main Ulang</button>
+            </div>
+        </div>
+
+        <!-- Modal pilih promosi pion -->
+        <div id="promoModal" class="promo-modal">
+            <div class="promo-card">
+                <p>Promosikan pion jadi:</p>
+                <div class="promo-choices">
+                    <button class="promo-choice" data-piece="Q">♛</button>
+                    <button class="promo-choice" data-piece="R">♜</button>
+                    <button class="promo-choice" data-piece="B">♝</button>
+                    <button class="promo-choice" data-piece="N">♞</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /* Style khusus untuk halaman chess */
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #f5f2eb; /* Biar backgroundnya full */
+    }
+    
+    /* Optional: biar transisi mulus */
+    * {
+        transition: background 0.3s ease;
+    }
+</style>
+    <script src="chess.js"></script>
+</body>
+
+</html>

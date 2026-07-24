@@ -145,13 +145,23 @@ hamburger.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
 
 // Tutup menu saat link diklik
+// Tutup menu saat link diklik
 menuLinks.forEach(link => {
   link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+
+    // Jika menuju halaman lain, biarkan browser membukanya
+    if (!href.startsWith('#')) {
+      toggleMenu();
+      return;
+    }
+
     e.preventDefault();
-    const targetId = link.getAttribute('href');
+
     toggleMenu();
+
     setTimeout(() => {
-      document.querySelector(targetId)?.scrollIntoView({
+      document.querySelector(href)?.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -588,14 +598,14 @@ function acceptInvitation() {
   const popup = document.getElementById("welcomePopup");
   popup.classList.add("hidden"); // Sembunyikan pop-up
   
-  // Cari elemen bagian game (pastikan section game lu punya class/id, misal class="game-section")
+
+  // Cari elemen bagian game dan geser halaman secara halus
   const gameSection = document.querySelector(".game-section");
-  
   if (gameSection) {
-    // Geser halaman secara halus (smooth scroll) ke arah bagian game
     gameSection.scrollIntoView({ behavior: "smooth" });
   }
 }
+
 
 function acceptInvitational() {
   const popup = document.getElementById("welcomePopup");
@@ -708,7 +718,48 @@ async function fetchSurah() {
   }
 }
 
-// Contoh posisi penempatan restartGame() di file JavaScript lu
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const bgVideo = document.getElementById("bgVideo");
+  const bgMusic = document.getElementById("bgMusic");
+  
+  // Jalankan video background (aman karena muted)
+  if (bgVideo) {
+    bgVideo.play().catch(e => console.log("Video autoplay diblokir"));
+  }
+  
+  // Fungsi untuk menyalakan musik saat ada interaksi pertama (klik/sentuh layar)
+  const startAudio = () => {
+    if (bgMusic) {
+      bgMusic.volume = 0.5; // Atur volume (0.0 - 1.0)
+      bgMusic.play().then(() => {
+        // Jika berhasil nyala, hapus event listener-nya
+        document.removeEventListener("click", startAudio);
+        document.removeEventListener("touchstart", startAudio);
+      }).catch(err => console.log("Audio menunggu interaksi user"));
+    }
+  };
+
+  // Pasang pemicu sentuhan/klik di seluruh layar
+  document.addEventListener("click", startAudio);
+  document.addEventListener("touchstart", startAudio);
+});
+
+
+window.addEventListener("load", () => {
+    const bgMusic = document.getElementById("bgMusic");
+
+    if (!bgMusic) return;
+
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+    }
+
+    setInterval(() => {
+        localStorage.setItem("musicTime", bgMusic.currentTime);
+    }, 1000);
+});

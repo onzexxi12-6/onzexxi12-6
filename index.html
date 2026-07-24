@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>ONZEXXI 🔥 12-6 | MAN 1 LANGKAT</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="chess.css">
 </head>
 
 <!-- Pop-up Greeting Awal -->
@@ -28,6 +29,10 @@
 
 
 <body>
+<video id="bgVideo" autoplay muted loop playsinline class="background-video">
+  <source src="video.mp4" type="video/mp4">
+</video>
+<audio id="bgMusic" src="audio.mp3" autoplay loop></audio>
 
   <!-- Background decor -->
   <div class="bg-glow bg-glow-1"></div>
@@ -59,10 +64,12 @@
         <li><a href="#siswa" class="menu-link">👨‍🎓 Daftar Siswa</a></li>
         <li><a href="#quran" class="menu-link">📖 Al - Qur'an</a></li>
         <li><a href="#game" class="menu-link"> 🎮 Game</a></li>
+        <li><a href="chess.html" class="menu-link"> ♟️ Catur</a></li>
       </ul>
     </div>
     
         <!-- LOGO LOVE -->
+  <div class="hero-decor">
     <div class="love-container">
       <svg class="love-svg" viewBox="0 0 100 100">
         <path class="love-path" d="M 50,30 C 50,10 20,0 10,20 C 0,40 20,60 50,90 C 80,60 100,40 90,20 C 80,0 50,10 50,30 Z" fill="none" stroke-linecap="round" />
@@ -75,6 +82,7 @@
         <path class="infinity-path" d="M 100,50 C 60,10 0,10 0,50 C 0,90 60,90 100,50 C 140,10 200,10 200,50 C 200,90 140,90 100,50 Z" fill="none" stroke-linecap="round" />
       </svg>
     </div>
+  </div>
     
 
     <div class="hero-content">
@@ -103,8 +111,6 @@
         </div>
       </div>
     </div> <!-- PENUTUP .hero-content -->
-
-    
 
     <a href="#struktur" class="scroll-hint">click to scroll</a>
 
@@ -153,6 +159,10 @@
       </div>
     </section>
     
+      <div class="hero-content">
+        <p class="hero-sub">ONZEXXI 12-6 &mdash; MAN 1 LANGKAT</p>
+      </div>
+    
     <!-- DAFTAR SISWA -->
     <section class="section" id="siswa">
       <h2 class="section-title">Daftar Siswa</h2>
@@ -167,10 +177,9 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p>🔥 ONZEXXI 12-6 &mdash; MAN 1 LANGKAT</p>
-    <p class="footer-sub">Merendah Untuk Meroket 🚀✨</p>
-  </footer>
+  <div class="hero-content">
+    <p class="hero-sub">Merendah Untuk Meroket 🚀</p>
+  </div>
 
   <button id="toTop" class="to-top hidden" title="Kembali ke atas">↑</button>
   
@@ -191,6 +200,7 @@
       <div class="mock-ball"></div>
     </div>
     <button id="startBtn" onclick="startGame()">Mulai Game</button>
+    <a href="chess.html" style="display:inline-block;margin-top:14px;color:var(--accent);text-decoration:none;font-size:14px;">♟️ Mau main Catur? Klik di sini</a>
   </div>
 
   <!-- Container Game Fullscreen (yang udah kita buat sebelumnya) -->
@@ -238,8 +248,6 @@
   </div>
 </section>
 
-
-<!-- Footer / Copyright Section -->
 <footer class="site-footer">
   <p>&copy; 2026 Najidla Azman. All rights reserved.</p>
 </footer>
