@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya | Developer & Desainer</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-dark: #0f172a;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #f1f5f9;
+            --card-dark: #1e293b;
+            --card-light: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Default Light Theme */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Dark Theme Class */
+        body.dark-theme {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s;
+        }
+        body.dark-theme .navbar {
+            background-color: rgba(15, 23, 42, 0.8);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: inherit !important;
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Theme Toggle Button */
+        #theme-toggle {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.2rem;
+            color: inherit;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px 0;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-img {
+            border-radius: 50%;
+            border: 8px solid rgba(79, 70, 229, 0.2);
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Utility Styles */
+        .text-primary-color {
+            color: var(--primary-color);
+        }
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            padding: 10px 24px;
+            font-weight: 500;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: var(--primary-hover);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+        .btn-outline-custom {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 30px;
+            padding: 8px 22px;
+            font-weight: 500;
+            background: transparent;
+            transition: all 0.3s;
+        }
+        .btn-outline-custom:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Cards and Elements for Portfolio & Skills */
+        .card-custom {
+            background-color: var(--card-light);
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            overflow: hidden;
+            height: 100%;
+        }
+        body.dark-theme .card-custom {
+            background-color: var(--card-dark);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-custom:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(79, 70, 229, 0.15);
+        }
+        .card-img-container {
+            height: 200px;
+            background: linear-gradient(135deg, #a5b4fc, #818cf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        /* Skills badges */
+        .skill-badge {
+            background-color: rgba(79, 70, 229, 0.1);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 500;
+            margin: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .skill-badge:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-icon {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgba(79, 70, 229, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        .contact-info-item:hover .contact-icon {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .social-link {
+            font-size: 1.5rem;
+            color: inherit;
+            margin: 0 10px;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+        .social-link:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 30px 0;
+            text-align: center;
+        }
+        body.dark-theme footer {
+            background-color: #020617;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">Portofolio.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#hero">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#skills">Keahlian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#projects">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#contact">Kontak</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn p-2" title="Ganti Tema">
+                            <i class="fas fa-moon" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 mt-5 mt-md-0 text-center text-md-start">
+                    <h5 class="text-primary-color mb-3">Halo, nama saya</h5>
+                    <h1 class="display-4 fw-bold mb-3">Najidla Azman</h1>
+                    <h3 class="h4 mb-4">Saya seorang <span id="typed-text" class="text-primary-color"></span></h3>
+                    <p class="lead mb-4">Saya berfokus pada pembuatan aplikasi web yang responsif, cepat, ramah pengguna, dan dibangun dengan standar kualitas kode yang tinggi.</p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                        <a href="#contact" class="btn btn-custom">Hubungi Saya</a>
+                        <a href="#projects" class="btn btn-outline-custom">Lihat Karya</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <!-- Default SVG Avatar if no image available -->
+                    <svg class="hero-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#grad)" />
+                        <!-- Avatar Silhouette -->
+                        <circle cx="50" cy="40" r="18" fill="#ffffff" />
+                        <path d="M 22,80 C 22,60 32,55 50,55 C 68,55 78,60 78,80 Z" fill="#ffffff" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-body-tertiary">
+        <div class="container">
+            <h2 class="text-center section-title">Tentang Saya</h2>
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-3">Siapa saya sebenarnya?</h3>
+                    <p>Saya adalah seorang pengembang web (Web Developer) yang sangat bersemangat dalam menggabungkan estetika desain dengan efisiensi kode. Dengan pengalaman dalam pengembangan frontend maupun backend, saya senang memecahkan masalah kompleks dengan solusi berbasis kode yang bersih.</p>
+                    <p>Saya terus memperbarui pengetahuan saya dengan teknologi web terbaru untuk memberikan hasil kerja yang optimal dan mengikuti standar industri saat ini.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-custom p-4">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 border-start border-primary border-4">
+                                    <h4 class="fw-bold text-primary-color m-0">3+</h4>
+                                    <small class="text-muted">Tahun Pengalaman</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border-start border-primary border-4">
+                                    <h4 class="fw-bold text-primary-color m-0">20+</h4>
+                                    <small class="text-muted">Proyek Selesai</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border-start border-primary border-4">
+                                    <h4 class="fw-bold text-primary-color m-0">15+</h4>
+                                    <small class="text-muted">Klien Puas</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 border-start border-primary border-4">
+                                    <h4 class="fw-bold text-primary-color m-0">100%</h4>
+                                    <small class="text-muted">Dedikasi Kerja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="text-center section-title">Keahlian</h2>
+            <p class="text-center text-muted mb-5">Beberapa teknologi dan bahasa pemrograman yang saya kuasai dan sering saya gunakan.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <span class="skill-badge"><i class="fab fa-html5 me-2"></i>HTML5</span>
+                    <span class="skill-badge"><i class="fab fa-css3-alt me-2"></i>CSS3</span>
+                    <span class="skill-badge"><i class="fab fa-js me-2"></i>JavaScript</span>
+                    <span class="skill-badge"><i class="fab fa-bootstrap me-2"></i>Bootstrap</span>
+                    <span class="skill-badge"><i class="fab fa-react me-2"></i>React.js</span>
+                    <span class="skill-badge"><i class="fab fa-node-js me-2"></i>Node.js</span>
+                    <span class="skill-badge"><i class="fab fa-git-alt me-2"></i>Git / GitHub</span>
+                    <span class="skill-badge"><i class="fas fa-database me-2"></i>SQL / NoSQL</span>
+                    <span class="skill-badge"><i class="fas fa-paint-brush me-2"></i>Responsive Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-body-tertiary">
+        <div class="container">
+            <h2 class="text-center section-title">Proyek Saya</h2>
+            <p class="text-center text-muted mb-5">Kumpulan dari beberapa karya terbaik yang telah saya buat akhir-akhir ini.</p>
+            <div class="row g-4 mt-2">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <div class="card-img-container">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary mb-2">E-Commerce</span>
+                            <h5 class="card-title fw-bold">Toko Online Sederhana</h5>
+                            <p class="card-text text-muted">Aplikasi toko online responsif dengan fitur keranjang belanja, filter kategori, dan integrasi WhatsApp.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <a href="#" class="btn btn-sm btn-outline-custom">Lihat Detail</a>
+                                <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <div class="card-img-container" style="background: linear-gradient(135deg, #10b981, #34d399);">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-success mb-2">API Integration</span>
+                            <h5 class="card-title fw-bold">Aplikasi Info Cuaca</h5>
+                            <p class="card-text text-muted">Aplikasi pencari cuaca real-time di seluruh dunia memanfaatkan OpenWeatherMap API dengan tampilan dinamis.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <a href="#" class="btn btn-sm btn-outline-custom">Lihat Detail</a>
+                                <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <div class="card-img-container" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning text-dark mb-2">Productivity</span>
+                            <h5 class="card-title fw-bold">Manajemen Tugas (Todo)</h5>
+                            <p class="card-text text-muted">Aplikasi manajemen tugas harian yang dilengkapi dengan fitur pengingat, prioritas, dan penyimpanan lokal (LocalStorage).</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <a href="#" class="btn btn-sm btn-outline-custom">Lihat Detail</a>
+                                <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center section-title">Hubungi Saya</h2>
+            <p class="text-center text-muted mb-5">Apakah Anda memiliki proyek menarik atau sekadar ingin berdiskusi? Jangan ragu untuk menghubungi!</p>
+            <div class="row g-4 mt-2 justify-content-center">
+                <div class="col-lg-5">
+                    <div class="card-custom p-4">
+                        <h4 class="fw-bold mb-4">Informasi Kontak</h4>
+                        <div class="contact-info-item d-flex align-items-center mb-3">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Email</h6>
+                                <p class="text-muted mb-0">najidlaofficial@email.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item d-flex align-items-center mb-3">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Telepon / WA</h6>
+                                <p class="text-muted mb-0">+62 838-9243-6207</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item d-flex align-items-center mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-0">Lokasi</h6>
+                                <p class="text-muted mb-0">Medan, Indonesia</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h5 class="fw-bold mb-3 mt-4 text-center">Ikuti Saya</h5>
+                        <div class="text-center">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-custom p-4">
+                        <h4 class="fw-bold mb-4">Kirim Pesan</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nama Lengkap</label>
+                                    <input type="text" class="form-control rounded-3" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Alamat Email</label>
+                                    <input type="email" class="form-control rounded-3" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subjek</label>
+                                    <input type="text" class="form-control rounded-3" id="subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Pesan Anda</label>
+                                    <textarea class="form-control rounded-3" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn btn-custom">Kirim Pesan <i class="fas fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2026 John Doe. Dibuat dengan <i class="fas fa-heart text-danger"></i> & Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for interactivity -->
+    <script>
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check local storage for preference
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-theme');
+            themeIcon.className = 'fas fa-sun';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            
+            // Update icon and local storage
+            if (isDark) {
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Dynamic Typing Effect
+        const words = ["Web Developer.", "UI/UX Designer.", "Problem Solver."];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedTextSpan = document.getElementById('typed-text');
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typedTextSpan.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typingSpeed = 100;
+            if (isDeleting) {
+                typingSpeed /= 2; // Delete faster
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typingSpeed = 1500; // Pause at full word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typingSpeed = 500; // Pause before typing next word
+            }
+
+            setTimeout(typeEffect, typingSpeed);
+        }
+
+        // Start Typing Effect once page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeEffect, 500);
+        });
+
+        // Form submission handling (Mock up)
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Terima kasih, ${name}! Pesan Anda berhasil dikirim (hanya simulasi).`);
+            contactForm.reset();
+        });
+
+        // Smooth scroll adjustment for sticky navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 75; // height of fixed navbar
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const targetRect = target.getBoundingClientRect().top;
+                    const targetPosition = targetRect - bodyRect;
+                    const offsetPosition = targetPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const navbarCollapse = document.getElementById('navbarNav');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

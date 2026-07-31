@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebHack Interactive Quiz App</title>
+    <meta name="description" content="Aplikasi Kuis Interaktif modern dengan berbagai pilihan subjek pelajaran dari WebHack.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body class="dark-theme">
+    <!-- Particle Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-container" id="btn-go-home" title="Kembali ke Beranda">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>WebHack <span>Quiz</span></h1>
+                    <p class="subtitle">Platform Asah Otak Interaktif</p>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <button id="btn-sound-toggle" class="icon-button" title="Toggle Suara">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <button id="btn-theme-toggle" class="icon-button" title="Toggle Tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Screen 1: Subject Selection & Settings -->
+            <section id="screen-subject" class="screen active">
+                <div class="hero-section">
+                    <div class="badge-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Siap Diuji?</div>
+                    <h2>Pilih Subjek & Tantang Diri Kamu!</h2>
+                    <p>Pilihlah salah satu mata pelajaran di bawah ini untuk memulai sesi kuis interaktif.</p>
+                </div>
+
+                <!-- Subject Grid -->
+                <div class="section-title">
+                    <h3><i class="fa-solid fa-book-bookmark"></i> Kategori Subjek Pelajaran</h3>
+                </div>
+                <div id="subject-grid" class="subject-grid">
+                    <!-- Dynamic subjects will be injected here -->
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i>
+                        <p>Memuat subjek kuis...</p>
+                    </div>
+                </div>
+
+                <!-- Quiz Settings Options -->
+                <div class="settings-card glass-panel">
+                    <div class="settings-header">
+                        <i class="fa-solid fa-sliders"></i>
+                        <h4>Pengaturan Kuis</h4>
+                    </div>
+                    <div class="settings-grid">
+                        <div class="setting-item">
+                            <label for="setting-question-count"><i class="fa-solid fa-list-ol"></i> Jumlah Soal</label>
+                            <select id="setting-question-count">
+                                <option value="10">10 Soal</option>
+                                <option value="20" selected>20 Soal</option>
+                                <option value="30">30 Soal</option>
+                                <option value="all">Semua Soal</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="setting-timer"><i class="fa-solid fa-stopwatch"></i> Batas Waktu per Soal</label>
+                            <select id="setting-timer">
+                                <option value="0">Tanpa Timer</option>
+                                <option value="15">15 Detik</option>
+                                <option value="30" selected>30 Detik</option>
+                                <option value="60">60 Detik</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="setting-shuffle"><i class="fa-solid fa-shuffle"></i> Acak Soal & Jawaban</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="setting-shuffle" checked>
+                                <span class="slider"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Quiz Button -->
+                <div class="start-action">
+                    <button id="btn-start-quiz" class="btn btn-primary btn-large disabled" disabled>
+                        <span>Mulai Kuis Sekarang</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Screen 2: Quiz Gameplay Screen -->
+            <section id="screen-quiz" class="screen">
+                <!-- Top Status Bar -->
+                <div class="quiz-status-bar glass-panel">
+                    <div class="status-left">
+                        <span id="quiz-subject-badge" class="badge-subject">Subject</span>
+                        <div class="question-counter">
+                            Soal <span id="current-q-index">1</span> / <span id="total-q-count">10</span>
+                        </div>
+                    </div>
+
+                    <div class="status-center">
+                        <div id="timer-container" class="timer-container">
+                            <i class="fa-solid fa-clock"></i>
+                            <span id="timer-text">30s</span>
+                        </div>
+                    </div>
+
+                    <div class="status-right">
+                        <div class="streak-badge" title="Streak Jawaban Benar Beruntun">
+                            <i class="fa-solid fa-fire"></i>
+                            <span id="streak-count">0</span>
+                        </div>
+                        <div class="score-live" title="Skor Saat Ini">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span id="live-score">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-bar-container">
+                    <div id="quiz-progress-bar" class="progress-bar-fill"></div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="question-card glass-panel">
+                    <div class="question-header">
+                        <span class="question-number-pill">Pertanyaan</span>
+                        <button id="btn-bookmark" class="btn-icon-text" title="Tandai soal ini">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Tandai</span>
+                        </button>
+                    </div>
+
+                    <h3 id="question-text" class="question-text">
+                        Loading pertanyaan...
+                    </h3>
+
+                    <!-- Options Container -->
+                    <div id="options-container" class="options-container">
+                        <!-- Options injected dynamically -->
+                    </div>
+
+                    <!-- Instant Feedback Banner -->
+                    <div id="feedback-banner" class="feedback-banner hidden">
+                        <div class="feedback-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="feedback-body">
+                            <h4 id="feedback-title">Jawaban Benar!</h4>
+                            <p id="feedback-desc">Kerja bagus, kamu menjawab dengan tepat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Navigation Buttons -->
+                <div class="quiz-navigation">
+                    <button id="btn-prev-q" class="btn btn-secondary" disabled>
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Sebelumnya</span>
+                    </button>
+                    <button id="btn-next-q" class="btn btn-primary" disabled>
+                        <span>Selanjutnya</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Screen 3: Quiz Results Screen -->
+            <section id="screen-result" class="screen">
+                <div class="result-hero glass-panel">
+                    <div class="score-circle-wrapper">
+                        <svg class="score-circle" viewBox="0 0 120 120">
+                            <circle class="score-circle-bg" cx="60" cy="60" r="52"></circle>
+                            <circle id="score-circle-bar" class="score-circle-bar" cx="60" cy="60" r="52"></circle>
+                        </svg>
+                        <div class="score-circle-text">
+                            <span id="final-percentage">0%</span>
+                            <small>SKOR AKHIR</small>
+                        </div>
+                    </div>
+
+                    <div id="result-grade-badge" class="result-grade-badge">Grade A</div>
+                    <h2 id="result-title">Hasil Kuis Luar Biasa!</h2>
+                    <p id="result-subtitle">Kamu menunjukkan pemahaman yang sangat tinggi dalam subjek ini.</p>
+
+                    <!-- Stat Cards -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon correct">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span id="stat-correct-count" class="stat-value">0</span>
+                                <span class="stat-label">Benar</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon incorrect">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span id="stat-wrong-count" class="stat-value">0</span>
+                                <span class="stat-label">Salah</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon streak">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span id="stat-max-streak" class="stat-value">0</span>
+                                <span class="stat-label">Max Streak</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon time">
+                                <i class="fa-solid fa-hourglass-half"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span id="stat-total-time" class="stat-value">00:00</span>
+                                <span class="stat-label">Total Waktu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="result-actions">
+                        <button id="btn-restart-quiz" class="btn btn-primary btn-medium">
+                            <i class="fa-solid fa-rotate-right"></i>
+                            <span>Coba Lagi Sesi Ini</span>
+                        </button>
+                        <button id="btn-choose-other" class="btn btn-secondary btn-medium">
+                            <i class="fa-solid fa-grip"></i>
+                            <span>Pilih Subjek Lain</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Review Answers Section -->
+                <div class="review-section glass-panel">
+                    <div class="review-header">
+                        <h3><i class="fa-solid fa-list-check"></i> Tinjauan Jawaban Detail</h3>
+                        <div class="review-filters">
+                            <button class="btn-filter active" data-filter="all">Semua (<span id="filter-count-all">0</span>)</button>
+                            <button class="btn-filter" data-filter="correct">Benar (<span id="filter-count-correct">0</span>)</button>
+                            <button class="btn-filter" data-filter="incorrect">Salah (<span id="filter-count-incorrect">0</span>)</button>
+                        </div>
+                    </div>
+                    <div id="review-list" class="review-list">
+                        <!-- Review items injected dynamically -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2026 WebHack Quiz Engine &bull; Dirancang untuk Pembelajaran Interaktif</p>
+        </footer>
+    </div>
+
+    <!-- Canvas for Confetti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Custom JS -->
+    <script src="quiz.js"></script>
+</body>
+</html>

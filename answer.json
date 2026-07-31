@@ -1,0 +1,1003 @@
+[
+    {
+        "question": "Choose the correct sentence.",
+        "options": [
+            "She go to school every day.",
+            "She goes to school every day.",
+            "She going to school every day.",
+            "She gone to school every day."
+        ],
+        "answer": "She goes to school every day.",
+        "subject": "english"
+    },
+    {
+        "question": "What is the synonym of 'honest'?",
+        "options": [
+            "Truthful",
+            "Lazy",
+            "Arrogant",
+            "Careless"
+        ],
+        "answer": "Truthful",
+        "subject": "english"
+    },
+    {
+        "question": "Which sentence uses Present Perfect Tense?",
+        "options": [
+            "I eat breakfast.",
+            "I ate breakfast.",
+            "I have eaten breakfast.",
+            "I am eating breakfast."
+        ],
+        "answer": "I have eaten breakfast.",
+        "subject": "english"
+    },
+    {
+        "question": "The passive form of 'They built the bridge' is ...",
+        "options": [
+            "The bridge built by them.",
+            "The bridge was built by them.",
+            "The bridge is built by them.",
+            "The bridge has built by them."
+        ],
+        "answer": "The bridge was built by them.",
+        "subject": "english"
+    },
+    {
+        "question": "What is the antonym of 'difficult'?",
+        "options": [
+            "Easy",
+            "Hard",
+            "Complex",
+            "Heavy"
+        ],
+        "answer": "Easy",
+        "subject": "english"
+    },
+    {
+        "question": "Nilai dari log₂(32) adalah ...",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "8"
+        ],
+        "answer": "5",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Jika f(x)=2x+3, maka f(5)= ...",
+        "options": [
+            "10",
+            "11",
+            "12",
+            "13"
+        ],
+        "answer": "13",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Hasil dari sin 30° adalah ...",
+        "options": [
+            "0",
+            "1/2",
+            "√2/2",
+            "√3/2"
+        ],
+        "answer": "1/2",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Persamaan kuadrat x² - 5x + 6 = 0 memiliki akar-akar ...",
+        "options": [
+            "1 dan 6",
+            "2 dan 3",
+            "-2 dan -3",
+            "3 dan 6"
+        ],
+        "answer": "2 dan 3",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Turunan dari f(x)=x³ adalah ...",
+        "options": [
+            "x²",
+            "2x²",
+            "3x²",
+            "3x"
+        ],
+        "answer": "3x²",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Proklamasi Kemerdekaan Indonesia dibacakan pada tanggal ...",
+        "options": [
+            "1 Juni 1945",
+            "17 Agustus 1945",
+            "18 Agustus 1945",
+            "20 Mei 1908"
+        ],
+        "answer": "17 Agustus 1945",
+        "subject": "history"
+    },
+    {
+        "question": "Tokoh yang mengetik naskah Proklamasi adalah ...",
+        "options": [
+            "Ahmad Soebardjo",
+            "Sayuti Melik",
+            "Moh. Hatta",
+            "Sutan Syahrir"
+        ],
+        "answer": "Sayuti Melik",
+        "subject": "history"
+    },
+    {
+        "question": "Organisasi Budi Utomo didirikan pada tahun ...",
+        "options": [
+            "1908",
+            "1912",
+            "1928",
+            "1945"
+        ],
+        "answer": "1908",
+        "subject": "history"
+    },
+    {
+        "question": "Sumpah Pemuda diikrarkan pada tanggal ...",
+        "options": [
+            "20 Mei 1908",
+            "17 Agustus 1945",
+            "28 Oktober 1928",
+            "18 Agustus 1945"
+        ],
+        "answer": "28 Oktober 1928",
+        "subject": "history"
+    },
+    {
+        "question": "Siapa ketua PPKI?",
+        "options": [
+            "Ir. Soekarno",
+            "Moh. Hatta",
+            "Ahmad Soebardjo",
+            "Ki Hajar Dewantara"
+        ],
+        "answer": "Ir. Soekarno",
+        "subject": "history"
+    },
+    {
+        "question": "Iman kepada malaikat termasuk rukun iman yang ke ...",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "answer": "2",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Sifat jujur dalam Islam disebut ...",
+        "options": [
+            "Amanah",
+            "Shiddiq",
+            "Tabligh",
+            "Fathanah"
+        ],
+        "answer": "Shiddiq",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Perilaku dapat dipercaya disebut ...",
+        "options": [
+            "Hasad",
+            "Takabur",
+            "Amanah",
+            "Ghibah"
+        ],
+        "answer": "Amanah",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Lawan sifat tawadhu adalah ...",
+        "options": [
+            "Ikhlas",
+            "Sabar",
+            "Takabur",
+            "Syukur"
+        ],
+        "answer": "Takabur",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Perilaku iri terhadap nikmat orang lain disebut ...",
+        "options": [
+            "Syukur",
+            "Hasad",
+            "Amanah",
+            "Sabar"
+        ],
+        "answer": "Hasad",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Nabi Muhammad SAW menerima wahyu pertama di Gua ...",
+        "options": [
+            "Tsur",
+            "Hira",
+            "Uhud",
+            "Quba"
+        ],
+        "answer": "Hira",
+        "subject": "ski"
+    },
+    {
+        "question": "Peristiwa hijrah Nabi Muhammad SAW ke Madinah terjadi pada tahun ...",
+        "options": [
+            "610 M",
+            "622 M",
+            "630 M",
+            "632 M"
+        ],
+        "answer": "622 M",
+        "subject": "ski"
+    },
+    {
+        "question": "Khalifah pertama setelah wafatnya Nabi Muhammad SAW adalah ...",
+        "options": [
+            "Umar bin Khattab",
+            "Ali bin Abi Thalib",
+            "Abu Bakar Ash-Shiddiq",
+            "Utsman bin Affan"
+        ],
+        "answer": "Abu Bakar Ash-Shiddiq",
+        "subject": "ski"
+    },
+    {
+        "question": "Dinasti Umayyah didirikan oleh ...",
+        "options": [
+            "Muawiyah bin Abu Sufyan",
+            "Harun Ar-Rasyid",
+            "Abu Ja'far Al-Manshur",
+            "Shalahuddin Al-Ayyubi"
+        ],
+        "answer": "Muawiyah bin Abu Sufyan",
+        "subject": "ski"
+    },
+    {
+        "question": "Panglima Islam yang membebaskan Baitul Maqdis dari Tentara Salib adalah ...",
+        "options": [
+            "Khalid bin Walid",
+            "Shalahuddin Al-Ayyubi",
+            "Amr bin Ash",
+            "Saad bin Abi Waqqash"
+        ],
+        "answer": "Shalahuddin Al-Ayyubi",
+        "subject": "ski"
+    },
+    {
+        "question": "Choose the correct conditional sentence.",
+        "options": [
+            "If I study hard, I will pass the exam.",
+            "If I studied hard, I pass the exam.",
+            "If I study hard, I passed the exam.",
+            "If I will study hard, I pass the exam."
+        ],
+        "answer": "If I study hard, I will pass the exam.",
+        "subject": "english"
+    },
+    {
+        "question": "What is the meaning of 'achievement'?",
+        "options": [
+            "Kegagalan",
+            "Pencapaian",
+            "Perjuangan",
+            "Kesempatan"
+        ],
+        "answer": "Pencapaian",
+        "subject": "english"
+    },
+    {
+        "question": "Which word is an adverb?",
+        "options": [
+            "Quick",
+            "Beauty",
+            "Quickly",
+            "Careful"
+        ],
+        "answer": "Quickly",
+        "subject": "english"
+    },
+    {
+        "question": "Complete the sentence: 'She ____ her homework before dinner yesterday.'",
+        "options": [
+            "finish",
+            "finishes",
+            "finished",
+            "finishing"
+        ],
+        "answer": "finished",
+        "subject": "english"
+    },
+    {
+        "question": "The opposite of 'ancient' is ...",
+        "options": [
+            "Modern",
+            "Old",
+            "Historic",
+            "Traditional"
+        ],
+        "answer": "Modern",
+        "subject": "english"
+    },
+    {
+        "question": "Nilai dari cos 60° adalah ...",
+        "options": [
+            "0",
+            "1/2",
+            "√2/2",
+            "√3/2"
+        ],
+        "answer": "1/2",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Jika x² = 49 dan x > 0, maka x = ...",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": "7",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Hasil dari integral ∫2x dx adalah ...",
+        "options": [
+            "x² + C",
+            "2x² + C",
+            "x + C",
+            "2 + C"
+        ],
+        "answer": "x² + C",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Nilai diskriminan dari persamaan x² - 4x + 3 = 0 adalah ...",
+        "options": [
+            "4",
+            "1",
+            "16",
+            "9"
+        ],
+        "answer": "4",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Jumlah sudut dalam segitiga adalah ...",
+        "options": [
+            "90°",
+            "180°",
+            "270°",
+            "360°"
+        ],
+        "answer": "180°",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Peristiwa Rengasdengklok terjadi pada tanggal ...",
+        "options": [
+            "16 Agustus 1945",
+            "17 Agustus 1945",
+            "18 Agustus 1945",
+            "15 Agustus 1945"
+        ],
+        "answer": "16 Agustus 1945",
+        "subject": "history"
+    },
+    {
+        "question": "Pendiri organisasi Muhammadiyah adalah ...",
+        "options": [
+            "KH Ahmad Dahlan",
+            "KH Hasyim Asy'ari",
+            "Ki Hajar Dewantara",
+            "HOS Cokroaminoto"
+        ],
+        "answer": "KH Ahmad Dahlan",
+        "subject": "history"
+    },
+    {
+        "question": "Pendiri Nahdlatul Ulama adalah ...",
+        "options": [
+            "KH Ahmad Dahlan",
+            "KH Wahab Hasbullah",
+            "KH Hasyim Asy'ari",
+            "KH Bisri Syansuri"
+        ],
+        "answer": "KH Hasyim Asy'ari",
+        "subject": "history"
+    },
+    {
+        "question": "VOC dibubarkan pada tahun ...",
+        "options": [
+            "1799",
+            "1808",
+            "1811",
+            "1908"
+        ],
+        "answer": "1799",
+        "subject": "history"
+    },
+    {
+        "question": "Tokoh yang dikenal sebagai Bapak Pendidikan Nasional adalah ...",
+        "options": [
+            "Ir. Soekarno",
+            "Moh. Hatta",
+            "Ki Hajar Dewantara",
+            "Douwes Dekker"
+        ],
+        "answer": "Ki Hajar Dewantara",
+        "subject": "history"
+    },
+    {
+        "question": "Jika f(x)=2x+1 dan g(x)=x², maka (f∘g)(2) = ...",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "answer": "9",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Nilai dari lim(x→2) (x²-4)/(x-2) adalah ...",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "answer": "4",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Determinan matriks [[1,2],[3,4]] adalah ...",
+        "options": [
+            "-2",
+            "2",
+            "4",
+            "10"
+        ],
+        "answer": "-2",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Nilai tan 45° adalah ...",
+        "options": [
+            "0",
+            "1",
+            "√2",
+            "√3"
+        ],
+        "answer": "1",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Jika barisan aritmetika memiliki a=3 dan b=5, maka U₁₀ = ...",
+        "options": [
+            "43",
+            "45",
+            "48",
+            "50"
+        ],
+        "answer": "48",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Choose the correct reported speech: 'I am tired,' she said.",
+        "options": [
+            "She said that she is tired.",
+            "She said that she was tired.",
+            "She said that she tired.",
+            "She said that she has tired."
+        ],
+        "answer": "She said that she was tired.",
+        "subject": "english"
+    },
+    {
+        "question": "Which sentence is grammatically correct?",
+        "options": [
+            "He don't like coffee.",
+            "He doesn't likes coffee.",
+            "He doesn't like coffee.",
+            "He not like coffee."
+        ],
+        "answer": "He doesn't like coffee.",
+        "subject": "english"
+    },
+    {
+        "question": "What is the meaning of 'environment'?",
+        "options": [
+            "Pemerintahan",
+            "Lingkungan",
+            "Perusahaan",
+            "Perjalanan"
+        ],
+        "answer": "Lingkungan",
+        "subject": "english"
+    },
+    {
+        "question": "Which word is a noun?",
+        "options": [
+            "Beautiful",
+            "Quickly",
+            "Happiness",
+            "Careful"
+        ],
+        "answer": "Happiness",
+        "subject": "english"
+    },
+    {
+        "question": "Complete the sentence: 'By next year, I ____ from high school.'",
+        "options": [
+            "graduate",
+            "graduated",
+            "will have graduated",
+            "am graduating"
+        ],
+        "answer": "will have graduated",
+        "subject": "english"
+    },
+    {
+        "question": "Perang Diponegoro berlangsung pada tahun ...",
+        "options": [
+            "1825-1830",
+            "1808-1811",
+            "1908-1912",
+            "1945-1949"
+        ],
+        "answer": "1825-1830",
+        "subject": "history"
+    },
+    {
+        "question": "Tokoh utama dalam Perang Diponegoro adalah ...",
+        "options": [
+            "Tuanku Imam Bonjol",
+            "Pangeran Diponegoro",
+            "Sultan Agung",
+            "Cut Nyak Dhien"
+        ],
+        "answer": "Pangeran Diponegoro",
+        "subject": "history"
+    },
+    {
+        "question": "Peristiwa Bandung Lautan Api terjadi pada tahun ...",
+        "options": [
+            "1945",
+            "1946",
+            "1947",
+            "1948"
+        ],
+        "answer": "1946",
+        "subject": "history"
+    },
+    {
+        "question": "Tokoh wanita pejuang dari Aceh yang terkenal adalah ...",
+        "options": [
+            "RA Kartini",
+            "Dewi Sartika",
+            "Cut Nyak Dhien",
+            "Martha Christina Tiahahu"
+        ],
+        "answer": "Cut Nyak Dhien",
+        "subject": "history"
+    },
+    {
+        "question": "Konferensi Asia Afrika diselenggarakan di kota ...",
+        "options": [
+            "Jakarta",
+            "Surabaya",
+            "Bandung",
+            "Yogyakarta"
+        ],
+        "answer": "Bandung",
+        "subject": "history"
+    },
+    {
+        "question": "Riya adalah perbuatan ...",
+        "options": [
+            "Beramal karena Allah",
+            "Memamerkan amal kepada orang lain",
+            "Menolong sesama",
+            "Bersyukur atas nikmat"
+        ],
+        "answer": "Memamerkan amal kepada orang lain",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Sikap berbaik sangka kepada orang lain disebut ...",
+        "options": [
+            "Hasad",
+            "Suuzan",
+            "Husnuzan",
+            "Takabur"
+        ],
+        "answer": "Husnuzan",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Lawan dari sifat amanah adalah ...",
+        "options": [
+            "Jujur",
+            "Khianat",
+            "Sabar",
+            "Ikhlas"
+        ],
+        "answer": "Khianat",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Gelar Al-Amin yang dimiliki Nabi Muhammad SAW berarti ...",
+        "options": [
+            "Yang Bijaksana",
+            "Yang Terpercaya",
+            "Yang Berani",
+            "Yang Dermawan"
+        ],
+        "answer": "Yang Terpercaya",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Perilaku menghormati dan berbakti kepada orang tua disebut ...",
+        "options": [
+            "Birrul Walidain",
+            "Tawakal",
+            "Istiqamah",
+            "Tasamuh"
+        ],
+        "answer": "Birrul Walidain",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Nilai dari 2³ × 2⁴ adalah ...",
+        "options": [
+            "2⁷",
+            "2¹²",
+            "4⁷",
+            "8⁴"
+        ],
+        "answer": "2⁷",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Jika log 100 = 2, maka log 1000 = ...",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "10"
+        ],
+        "answer": "3",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Peluang muncul angka 3 saat sebuah dadu dilempar adalah ...",
+        "options": [
+            "1/3",
+            "1/4",
+            "1/6",
+            "1/2"
+        ],
+        "answer": "1/6",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Vektor (2,3) + (1,4) = ...",
+        "options": [
+            "(3,7)",
+            "(2,7)",
+            "(1,12)",
+            "(3,12)"
+        ],
+        "answer": "(3,7)",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Bayangan titik (2,3) oleh translasi T=(4,-1) adalah ...",
+        "options": [
+            "(6,2)",
+            "(6,4)",
+            "(2,2)",
+            "(4,3)"
+        ],
+        "answer": "(6,2)",
+        "subject": "mathematics"
+    },
+    {
+        "question": "What is the meaning of 'scholarship'?",
+        "options": [
+            "Beasiswa",
+            "Perpustakaan",
+            "Pendidikan",
+            "Pelatihan"
+        ],
+        "answer": "Beasiswa",
+        "subject": "english"
+    },
+    {
+        "question": "Choose the correct sentence.",
+        "options": [
+            "The students was studying.",
+            "The students were studying.",
+            "The students is studying.",
+            "The students studying."
+        ],
+        "answer": "The students were studying.",
+        "subject": "english"
+    },
+    {
+        "question": "Which word is closest in meaning to 'rapid'?",
+        "options": [
+            "Slow",
+            "Quick",
+            "Weak",
+            "Rare"
+        ],
+        "answer": "Quick",
+        "subject": "english"
+    },
+    {
+        "question": "Complete the sentence: 'If I had enough money, I ____ a new laptop.'",
+        "options": [
+            "buy",
+            "will buy",
+            "would buy",
+            "bought"
+        ],
+        "answer": "would buy",
+        "subject": "english"
+    },
+    {
+        "question": "Which sentence is in passive voice?",
+        "options": [
+            "The teacher explains the lesson.",
+            "The lesson is explained by the teacher.",
+            "The teacher is explaining the lesson.",
+            "The teacher explained the lesson."
+        ],
+        "answer": "The lesson is explained by the teacher.",
+        "subject": "english"
+    },
+    {
+        "question": "Indische Partij didirikan oleh tiga serangkai, salah satunya adalah ...",
+        "options": [
+            "Ki Hajar Dewantara",
+            "Moh. Hatta",
+            "Sutan Syahrir",
+            "Soepomo"
+        ],
+        "answer": "Ki Hajar Dewantara",
+        "subject": "history"
+    },
+    {
+        "question": "Tujuan utama didirikannya Budi Utomo adalah ...",
+        "options": [
+            "Perdagangan",
+            "Pendidikan dan kemajuan bangsa",
+            "Militer",
+            "Penyebaran agama"
+        ],
+        "answer": "Pendidikan dan kemajuan bangsa",
+        "subject": "history"
+    },
+    {
+        "question": "Tokoh yang dikenal sebagai Bapak Koperasi Indonesia adalah ...",
+        "options": [
+            "Moh. Hatta",
+            "Ir. Soekarno",
+            "Sutan Syahrir",
+            "Muhammad Yamin"
+        ],
+        "answer": "Moh. Hatta",
+        "subject": "history"
+    },
+    {
+        "question": "Perjanjian Linggarjati ditandatangani pada tahun ...",
+        "options": [
+            "1945",
+            "1946",
+            "1947",
+            "1948"
+        ],
+        "answer": "1946",
+        "subject": "history"
+    },
+    {
+        "question": "Pahlawan nasional yang memimpin Perang Padri adalah ...",
+        "options": [
+            "Pangeran Antasari",
+            "Tuanku Imam Bonjol",
+            "Cut Nyak Dhien",
+            "Sultan Hasanuddin"
+        ],
+        "answer": "Tuanku Imam Bonjol",
+        "subject": "history"
+    },
+    {
+        "question": "Sikap selalu merasa cukup atas pemberian Allah disebut ...",
+        "options": [
+            "Qanaah",
+            "Hasad",
+            "Riya",
+            "Takabur"
+        ],
+        "answer": "Qanaah",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Percaya sepenuhnya kepada Allah setelah berusaha disebut ...",
+        "options": [
+            "Tasamuh",
+            "Tawakal",
+            "Syukur",
+            "Ikhlas"
+        ],
+        "answer": "Tawakal",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Menggunjing keburukan orang lain disebut ...",
+        "options": [
+            "Fitnah",
+            "Ghibah",
+            "Amanah",
+            "Ihsan"
+        ],
+        "answer": "Ghibah",
+        "subject": "aqidah_akhlak"
+    },
+    {
+        "question": "Khalifah yang mendapat julukan Al-Faruq adalah ...",
+        "options": [
+            "Abu Bakar Ash-Shiddiq",
+            "Umar bin Khattab",
+            "Utsman bin Affan",
+            "Ali bin Abi Thalib"
+        ],
+        "answer": "Umar bin Khattab",
+        "subject": "ski"
+    },
+    {
+        "question": "Pusat pemerintahan Dinasti Abbasiyah berada di kota ...",
+        "options": [
+            "Damaskus",
+            "Madinah",
+            "Baghdad",
+            "Kairo"
+        ],
+        "answer": "Baghdad",
+        "subject": "ski"
+    },
+    {
+        "question": "Jika A = [[1,2],[3,4]] dan B = [[2,0],[1,2]], maka elemen baris pertama kolom pertama dari AB adalah ...",
+        "options": [
+            "2",
+            "4",
+            "5",
+            "7"
+        ],
+        "answer": "4",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Nilai dari 5! adalah ...",
+        "options": [
+            "25",
+            "60",
+            "120",
+            "720"
+        ],
+        "answer": "120",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Banyak cara memilih 2 siswa dari 5 siswa adalah ...",
+        "options": [
+            "5",
+            "10",
+            "15",
+            "20"
+        ],
+        "answer": "10",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Nilai lim(x→0) sin(x)/x adalah ...",
+        "options": [
+            "0",
+            "1",
+            "Tidak ada",
+            "∞"
+        ],
+        "answer": "1",
+        "subject": "mathematics"
+    },
+    {
+        "question": "Jika sebuah lingkaran memiliki jari-jari 7 cm, maka diameternya adalah ...",
+        "options": [
+            "7 cm",
+            "10 cm",
+            "14 cm",
+            "21 cm"
+        ],
+        "answer": "14 cm",
+        "subject": "mathematics"
+    },
+    {
+        "question": "What is the meaning of 'responsibility'?",
+        "options": [
+            "Kesempatan",
+            "Tanggung jawab",
+            "Keberhasilan",
+            "Kesulitan"
+        ],
+        "answer": "Tanggung jawab",
+        "subject": "english"
+    },
+    {
+        "question": "Choose the correct sentence.",
+        "options": [
+            "She has lived here since five years.",
+            "She has lived here for five years.",
+            "She lives here since five years.",
+            "She living here for five years."
+        ],
+        "answer": "She has lived here for five years.",
+        "subject": "english"
+    },
+    {
+        "question": "Which word is a verb?",
+        "options": [
+            "Decision",
+            "Beautiful",
+            "Run",
+            "Quickly"
+        ],
+        "answer": "Run",
+        "subject": "english"
+    },
+    {
+        "question": "Complete the sentence: 'The book ____ by the student yesterday.'",
+        "options": [
+            "was read",
+            "is read",
+            "reads",
+            "reading"
+        ],
+        "answer": "was read",
+        "subject": "english"
+    },
+    {
+        "question": "The synonym of 'important' is ...",
+        "options": [
+            "Trivial",
+            "Significant",
+            "Small",
+            "Weak"
+        ],
+        "answer": "Significant",
+        "subject": "english"
+    },
+    {
+        "question": "Organisasi Sarekat Islam didirikan oleh ...",
+        "options": [
+            "HOS Tjokroaminoto",
+            "Ki Hajar Dewantara",
+            "Douwes Dekker",
+            "Moh. Hatta"
+        ],
+        "answer": "HOS Tjokroaminoto",
+        "subject": "history"
+    }
+]

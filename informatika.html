@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Web - Struktur HTML dan CSS (Dengan Preview)</title>
+    <link rel="stylesheet" href="informatika.css">
+</head>
+
+<body>
+    <a href="index.html" class="back-btn"> < Kembali</a>
+    <div class="modul-web">
+        <section>
+            <h2>📖 Elemen HTML Penting</h2>
+            <p>HTML adalah fondasi dari semua halaman web. Tabel berikut menampilkan elemen-elemen HTML yang sering digunakan beserta penjelasannya. Klik tombol "Preview" untuk melihat contoh hasilnya!</p>
+
+            <div class="overflow-x-auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemen HTML</th>
+                            <th>Deskripsi</th>
+                        </tr>
+                    </thead>
+
+                    <!-- ELEMEN STRUKTUR DASAR (TIDAK TAMPIL) -->
+                    <tr class="no-preview">
+                        <td>&lt;!DOCTYPE html&gt;</td>
+                        <td>Deklarasi untuk memberitahu browser bahwa ini adalah dokumen HTML5.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;html&gt;</td>
+                        <td>Elemen akar (root) yang membungkus seluruh konten halaman web.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;head&gt;</td>
+                        <td>Wadah metadata (informasi tentang data) yang tidak tampil di browser.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;meta&gt;</td>
+                        <td>Mendefinisikan metadata seperti karakter set, deskripsi, dan keyword SEO.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;link&gt;</td>
+                        <td>Menghubungkan dokumen dengan sumber eksternal (paling sering CSS).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;style&gt;</td>
+                        <td>Digunakan untuk menulis kode CSS langsung di dalam file HTML.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;script&gt;</td>
+                        <td>Menyisipkan atau merujuk ke kode JavaScript.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;title&gt;</td>
+                        <td>Menentukan judul halaman yang muncul di tab browser.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;body&gt;</td>
+                        <td>Berisi semua konten visual seperti teks, gambar, dan tombol.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;base&gt;</td>
+                        <td>Menentukan URL dasar untuk semua link relatif dalam dokumen.</td>
+                    </tr>
+
+                    <!-- ELEMEN YANG MEMBUTUHKAN PARENT -->
+                    <tr class="no-preview">
+                        <td>&lt;source&gt;</td>
+                        <td>Menentukan sumber media untuk elemen &lt;video&gt; atau &lt;audio&gt;. Tidak tampil sendiri.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;summary&gt;</td>
+                        <td>Judul yang diklik untuk membuka elemen &lt;details&gt;. Hanya tampil bersama details.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;figcaption&gt;</td>
+                        <td>Keterangan untuk elemen &lt;figure&gt;. Hanya tampil bersama figure.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;option&gt;</td>
+                        <td>Item pilihan di dalam &lt;select&gt; atau &lt;datalist&gt;. Hanya tampil di dropdown.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;li&gt;</td>
+                        <td>Item daftar yang diletakkan di dalam &lt;ol&gt; atau &lt;ul&gt;.</td>
+                    </tr>
+
+                    <!-- ELEMEN TABEL (MEMBUTUHKAN STRUKTUR LENGKAP) -->
+                    <tr class="no-preview">
+                        <td>&lt;thead&gt;</td>
+                        <td>Bagian kepala tabel yang berisi header/judul kolom.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;tbody&gt;</td>
+                        <td>Bagian tubuh tabel yang berisi data utama.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;tfoot&gt;</td>
+                        <td>Bagian kaki tabel, biasanya untuk ringkasan atau total.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;tr&gt;</td>
+                        <td>Baris tabel (table row).</td>
+                    </tr>
+
+                    <!-- ELEMEN INTERAKTIF (BUTUH JAVASCRIPT) -->
+                    <tr class="no-preview">
+                        <td>&lt;canvas&gt;</td>
+                        <td>Area untuk menggambar grafik, animasi, atau game menggunakan JavaScript.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;dialog&gt;</td>
+                        <td>Membuat kotak dialog atau modal bawaan HTML. Butuh JavaScript untuk menampilkan.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;datalist&gt;</td>
+                        <td>Daftar saran untuk elemen input. Membutuhkan interaksi dengan input.</td>
+                    </tr>
+
+                    <!-- ELEMEN YANG MEMBUTUHKAN KONTEN KHUSUS -->
+                    <tr class="no-preview">
+                        <td>&lt;figure&gt;</td>
+                        <td>Wadah untuk gambar, diagram, atau ilustrasi. Membutuhkan konten di dalamnya.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;svg&gt;</td>
+                        <td>Membuat gambar vektor yang dapat diperbesar tanpa pecah. Butuh kode SVG khusus.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;blockquote&gt;</td>
+                        <td>Menandai teks yang merupakan kutipan dari sumber lain.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;code&gt;</td>
+                        <td>Menampilkan potongan kode komputer atau pemrograman.</td>
+                    </tr>
+
+                    <!-- ELEMEN KHUSUS (KURANG UMUM/TIDAK TERLIHAT) -->
+                    <tr class="no-preview">
+                        <td>&lt;noscript&gt;</td>
+                        <td>Konten yang tampil jika JavaScript dinonaktifkan di browser.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;template&gt;</td>
+                        <td>Menyimpan template HTML yang belum dirender. Tidak tampil di halaman.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;meter&gt;</td>
+                        <td>Menampilkan nilai dalam rentang tertentu (gauge/indikator).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;time&gt;</td>
+                        <td>Menandai tanggal atau waktu untuk mesin pencari.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;sup&gt;</td>
+                        <td>Membuat teks pangkat (superscript).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;sub&gt;</td>
+                        <td>Membuat teks indeks (subscript).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;q&gt;</td>
+                        <td>Membuat kutipan pendek di dalam paragraf.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;abbr&gt;</td>
+                        <td>Mendefinisikan singkatan atau akronim.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>&lt;kbd&gt;</td>
+                        <td>Menampilkan input keyboard.</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemen HTML</th>
+                            <th>Deskripsi</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-element="h1">
+                            <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                            <td>Heading / judul halaman (h1 terbesar, h6 terkecil).</td>
+                            <td><button class="preview-btn" onclick="showPreview('h1', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="p">
+                            <td>&lt;p&gt;</td>
+                            <td>Paragraf untuk teks biasa.</td>
+                            <td><button class="preview-btn" onclick="showPreview('p', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="a">
+                            <td>&lt;a&gt;</td>
+                            <td>Link untuk navigasi ke halaman lain atau lokasi.</td>
+                            <td><button class="preview-btn" onclick="showPreview('a', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="img">
+                            <td>&lt;img&gt;</td>
+                            <td>Menyisipkan gambar ke halaman.</td>
+                            <td><button class="preview-btn" onclick="showPreview('img', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="button">
+                            <td>&lt;button&gt;</td>
+                            <td>Membuat tombol yang dapat diklik.</td>
+                            <td><button class="preview-btn" onclick="showPreview('button', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="input">
+                            <td>&lt;input&gt;</td>
+                            <td>Field input untuk pengguna memasukkan data (text, email, password, dll).</td>
+                            <td><button class="preview-btn" onclick="showPreview('input', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="div">
+                            <td>&lt;div&gt;</td>
+                            <td>Pembungkus generic untuk mengelompokkan elemen lain.</td>
+                            <td><button class="preview-btn" onclick="showPreview('div', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="span">
+                            <td>&lt;span&gt;</td>
+                            <td>Pembungkus inline untuk teks atau elemen kecil.</td>
+                            <td><button class="preview-btn" onclick="showPreview('span', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="ul">
+                            <td>&lt;ul&gt; &lt;li&gt;</td>
+                            <td>Daftar tidak terurut (bullet list).</td>
+                            <td><button class="preview-btn" onclick="showPreview('ul', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="ol">
+                            <td>&lt;ol&gt; &lt;li&gt;</td>
+                            <td>Daftar terurut (numbered list).</td>
+                            <td><button class="preview-btn" onclick="showPreview('ol', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="strong">
+                            <td>&lt;strong&gt;</td>
+                            <td>Teks penting (biasanya ditampilkan tebal, semantic).</td>
+                            <td><button class="preview-btn" onclick="showPreview('strong', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="em">
+                            <td>&lt;em&gt;</td>
+                            <td>Teks dengan penekanan (biasanya italic, semantic).</td>
+                            <td><button class="preview-btn" onclick="showPreview('em', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="br">
+                            <td>&lt;br&gt;</td>
+                            <td>Penyisip line break / garis baru.</td>
+                            <td><button class="preview-btn" onclick="showPreview('br', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="hr">
+                            <td>&lt;hr&gt;</td>
+                            <td>Garis pemisah horizontal.</td>
+                            <td><button class="preview-btn" onclick="showPreview('hr', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="form">
+                            <td>&lt;form&gt;</td>
+                            <td>Wrapper untuk input field dan tombol submit.</td>
+                            <td><button class="preview-btn" onclick="showPreview('form', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="label">
+                            <td>&lt;label&gt;</td>
+                            <td>Label untuk input field agar lebih accessible.</td>
+                            <td><button class="preview-btn" onclick="showPreview('label', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="textarea">
+                            <td>&lt;textarea&gt;</td>
+                            <td>Field input multi-baris untuk teks panjang.</td>
+                            <td><button class="preview-btn" onclick="showPreview('textarea', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="select">
+                            <td>&lt;select&gt; &lt;option&gt;</td>
+                            <td>Dropdown menu untuk memilih satu opsi dari banyak pilihan.</td>
+                            <td><button class="preview-btn" onclick="showPreview('select', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="header">
+                            <td>&lt;header&gt;</td>
+                            <td>Bagian kepala halaman, biasanya berisi logo dan menu navigasi.</td>
+                            <td><button class="preview-btn" onclick="showPreview('header', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="nav">
+                            <td>&lt;nav&gt;</td>
+                            <td>Bagian navigasi halaman.</td>
+                            <td><button class="preview-btn" onclick="showPreview('nav', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="main">
+                            <td>&lt;main&gt;</td>
+                            <td>Konten utama halaman.</td>
+                            <td><button class="preview-btn" onclick="showPreview('main', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="footer">
+                            <td>&lt;footer&gt;</td>
+                            <td>Bagian kaki halaman, biasanya berisi info tambahan dan copyright.</td>
+                            <td><button class="preview-btn" onclick="showPreview('footer', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="article">
+                            <td>&lt;article&gt;</td>
+                            <td>Konten independen yang bisa berdiri sendiri (berita, blog post).</td>
+                            <td><button class="preview-btn" onclick="showPreview('article', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="section">
+                            <td>&lt;section&gt;</td>
+                            <td>Bagian dari halaman yang memiliki tema atau topik tertentu.</td>
+                            <td><button class="preview-btn" onclick="showPreview('section', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="aside">
+                            <td>&lt;aside&gt;</td>
+                            <td>Konten sampingan (sidebar, widget, iklan).</td>
+                            <td><button class="preview-btn" onclick="showPreview('aside', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="table">
+                            <td>&lt;table&gt; &lt;tr&gt; &lt;td&gt;</td>
+                            <td>Membuat tabel dengan baris dan kolom.</td>
+                            <td><button class="preview-btn" onclick="showPreview('table', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="th">
+                            <td>&lt;th&gt;</td>
+                            <td>Sel header tabel (table header), biasanya ditampilkan tebal.</td>
+                            <td><button class="preview-btn" onclick="showPreview('th', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="td">
+                            <td>&lt;td&gt;</td>
+                            <td>Sel data tabel (table data) untuk konten reguler.</td>
+                            <td><button class="preview-btn" onclick="showPreview('td', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="video">
+                            <td>&lt;video&gt;</td>
+                            <td>Menyisipkan video yang dapat diputar langsung di halaman.</td>
+                            <td><button class="preview-btn" onclick="showPreview('video', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="audio">
+                            <td>&lt;audio&gt;</td>
+                            <td>Menyisipkan file audio yang dapat diputar di halaman.</td>
+                            <td><button class="preview-btn" onclick="showPreview('audio', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="iframe">
+                            <td>&lt;iframe&gt;</td>
+                            <td>Menampilkan halaman web lain di dalam halaman.</td>
+                            <td><button class="preview-btn" onclick="showPreview('iframe', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="details">
+                            <td>&lt;details&gt;</td>
+                            <td>Membuat konten yang bisa dibuka dan ditutup.</td>
+                            <td><button class="preview-btn" onclick="showPreview('details', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="progress">
+                            <td>&lt;progress&gt;</td>
+                            <td>Menampilkan progress bar.</td>
+                            <td><button class="preview-btn" onclick="showPreview('progress', 'HTML')">Preview</button></td>
+                        </tr>
+                        <tr data-element="mark">
+                            <td>&lt;mark&gt;</td>
+                            <td>Menyorot teks seperti stabilo.</td>
+                            <td><button class="preview-btn" onclick="showPreview('mark', 'HTML')">Preview</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 style="margin-top: 50px;">🎨 Properti CSS Penting</h2>
+            <p>CSS digunakan untuk mengatur gaya dan tata letak halaman web. Klik "Preview" untuk melihat contoh penerapan properti CSS!</p>
+
+            <div class="overflow-x-auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Properti CSS</th>
+                            <th>Fungsi / Deskripsi</th>
+                        </tr>
+                    </thead>
+
+
+                    <tr class="no-preview">
+                        <td>z-index</td>
+                        <td>Mengatur urutan lapisan elemen.</td>
+                    </tr>
+                    <!-- PROPERTI POSITIONING & LAYOUT -->
+                    <tr class="no-preview">
+                        <td>top, right, bottom, left</td>
+                        <td>Mengatur jarak dari tepi dalam positioning. Butuh properti position.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>grid-template-columns</td>
+                        <td>Menentukan jumlah dan lebar kolom dalam CSS Grid.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>min-width</td>
+                        <td>Menentukan lebar minimum elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>max-width</td>
+                        <td>Menentukan lebar maksimum elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>min-height</td>
+                        <td>Menentukan tinggi minimum elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>max-height</td>
+                        <td>Menentukan tinggi maksimum elemen.</td>
+                    </tr>
+
+                    <!-- PROPERTI TIPOGRAFI -->
+                    <tr class="no-preview">
+                        <td>font-family</td>
+                        <td>Mengatur jenis font yang digunakan (Arial, Times New Roman, dll).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>line-height</td>
+                        <td>Mengatur tinggi baris teks.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>letter-spacing</td>
+                        <td>Mengatur jarak antar huruf.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>word-spacing</td>
+                        <td>Mengatur jarak antar kata.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>white-space</td>
+                        <td>Mengatur penanganan spasi dan line break.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>word-break</td>
+                        <td>Mengatur pemotongan kata saat overflow.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>text-overflow</td>
+                        <td>Menentukan tampilan teks yang terpotong.</td>
+                    </tr>
+
+                    <!-- PROPERTI BACKGROUND -->
+                    <tr class="no-preview">
+                        <td>background-size</td>
+                        <td>Mengatur ukuran gambar latar (cover, contain).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>background-repeat</td>
+                        <td>Mengatur apakah gambar latar diulang atau tidak.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>background-position</td>
+                        <td>Mengatur posisi awal gambar latar.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>background-attachment</td>
+                        <td>Menentukan apakah background ikut scroll atau tetap (fixed).</td>
+                    </tr>
+
+                    <!-- PROPERTI BORDER & OUTLINE -->
+                    <tr class="no-preview">
+                        <td>outline</td>
+                        <td>Garis di luar border (biasanya untuk fokus aksesibilitas).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>border-collapse</td>
+                        <td>Mengatur apakah garis tepi tabel digabung atau dipisah.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>border-style</td>
+                        <td>Mengatur jenis garis (solid, dashed, dotted).</td>
+                    </tr>
+
+                    <!-- PROPERTI VISUAL EFFECTS (MEMBUTUHKAN ELEMEN LAIN) -->
+                    <tr class="no-preview">
+                        <td>clip-path</td>
+                        <td>Memotong elemen menjadi bentuk tertentu (lingkaran, poligon).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>backdrop-filter</td>
+                        <td>Efek blur pada area di belakang elemen (efek kaca).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>mix-blend-mode</td>
+                        <td>Menentukan bagaimana konten elemen bercampur dengan latar belakang.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>mask-image</td>
+                        <td>Menyembunyikan bagian elemen berdasarkan gambar masker.</td>
+                    </tr>
+
+                    <!-- PROPERTI MULTI-COLUMN -->
+                    <tr class="no-preview">
+                        <td>column-count</td>
+                        <td>Membagi teks menjadi beberapa kolom seperti koran.</td>
+                    </tr>
+
+                    <!-- PROPERTI TRANSFORM & ANIMATION (MEMBUTUHKAN KONTEKS) -->
+                    <tr class="no-preview">
+                        <td>transform-origin</td>
+                        <td>Menentukan titik pusat dari transformasi elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>animation</td>
+                        <td>Menerapkan animasi yang dibuat dengan @keyframes.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>transition-duration</td>
+                        <td>Menentukan berapa lama transisi berlangsung.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>transition-delay</td>
+                        <td>Menentukan waktu tunggu sebelum transisi dimulai.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>transition-timing-function</td>
+                        <td>Mengatur kurva kecepatan transisi (ease-in, linear, dll).</td>
+                    </tr>
+
+                    <!-- PROPERTI 3D -->
+                    <tr class="no-preview">
+                        <td>perspective</td>
+                        <td>Memberikan efek kedalaman 3D pada elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>backface-visibility</td>
+                        <td>Menentukan apakah sisi belakang elemen terlihat saat diputar.</td>
+                    </tr>
+
+                    <!-- PROPERTI SCROLL & INTERAKSI -->
+                    <tr class="no-preview">
+                        <td>scroll-behavior</td>
+                        <td>Mengatur apakah scroll internal berlangsung halus (smooth).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>scroll-snap-type</td>
+                        <td>Mengunci posisi scroll pada titik tertentu (efek slider).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>overscroll-behavior</td>
+                        <td>Mengontrol apa yang terjadi saat batas scroll tercapai.</td>
+                    </tr>
+
+                    <!-- PROPERTI INTERAKSI USER -->
+                    <tr class="no-preview">
+                        <td>user-select</td>
+                        <td>Mengatur apakah teks dapat dipilih pengguna.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>pointer-events</td>
+                        <td>Mengatur apakah elemen merespon klik/sentuhan atau tidak.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>resize</td>
+                        <td>Menentukan apakah elemen bisa diubah ukurannya oleh pengguna.</td>
+                    </tr>
+
+                    <!-- PROPERTI KONTROL FORM -->
+                    <tr class="no-preview">
+                        <td>accent-color</td>
+                        <td>Mengatur warna utama kontrol form (checkbox/radio).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>caret-color</td>
+                        <td>Mengatur warna kursor pengetikan di input teks.</td>
+                    </tr>
+
+                    <!-- PROPERTI OBJECT FIT -->
+                    <tr class="no-preview">
+                        <td>object-fit</td>
+                        <td>Mengatur bagaimana gambar/video menyesuaikan ukuran wadah.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>object-position</td>
+                        <td>Menentukan posisi gambar/video dalam wadah.</td>
+                    </tr>
+
+                    <!-- PROPERTI LAINNYA (TIDAK TAMPIL VISUAL) -->
+                    <tr class="no-preview">
+                        <td>aspect-ratio</td>
+                        <td>Menentukan rasio lebar dan tinggi elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>box-decoration-break</td>
+                        <td>Mengontrol tampilan dekorasi saat elemen terpecah di baris baru.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>isolation</td>
+                        <td>Mengontrol konteks pencampuran elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>contain</td>
+                        <td>Membatasi pengaruh rendering elemen.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>will-change</td>
+                        <td>Memberitahu browser properti apa yang akan berubah untuk optimasi performa.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>visibility</td>
+                        <td>Menyembunyikan elemen tanpa menghilangkan ruangnya.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>content</td>
+                        <td>Digunakan dengan pseudo-element (:before/:after) untuk menyisipkan konten.</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>counter-reset</td>
+                        <td>Membuat atau mengatur ulang variabel counter (untuk penomoran otomatis).</td>
+                    </tr>
+                    <tr class="no-preview">
+                        <td>quotes</td>
+                        <td>Menentukan tanda kutip mana yang digunakan untuk elemen &lt;q&gt;.</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Properti CSS</th>
+                            <th>Fungsi / Deskripsi</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-css="color">
+                            <td>color</td>
+                            <td>Mengatur warna teks.</td>
+                            <td><button class="preview-btn" onclick="showPreview('color', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="background-color">
+                            <td>background-color</td>
+                            <td>Mengatur warna latar belakang elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('background-color', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="font-size">
+                            <td>font-size</td>
+                            <td>Mengatur ukuran font teks.</td>
+                            <td><button class="preview-btn" onclick="showPreview('font-size', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="font-weight">
+                            <td>font-weight</td>
+                            <td>Mengatur ketebalan font (normal, bold, 100-900).</td>
+                            <td><button class="preview-btn" onclick="showPreview('font-weight', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="text-align">
+                            <td>text-align</td>
+                            <td>Menyelaraskan teks (left, center, right, justify).</td>
+                            <td><button class="preview-btn" onclick="showPreview('text-align', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="text-decoration">
+                            <td>text-decoration</td>
+                            <td>Menambah dekorasi teks (underline, overline, line-through).</td>
+                            <td><button class="preview-btn" onclick="showPreview('text-decoration', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="margin">
+                            <td>margin</td>
+                            <td>Mengatur jarak luar elemen dari elemen sekitarnya.</td>
+                            <td><button class="preview-btn" onclick="showPreview('margin', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="padding">
+                            <td>padding</td>
+                            <td>Mengatur jarak dalam elemen dari tepi border.</td>
+                            <td><button class="preview-btn" onclick="showPreview('padding', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="border">
+                            <td>border</td>
+                            <td>Menambah garis tepi pada elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('border', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="width">
+                            <td>width</td>
+                            <td>Mengatur lebar elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('width', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="height">
+                            <td>height</td>
+                            <td>Mengatur tinggi elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('height', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="display">
+                            <td>display</td>
+                            <td>Mengatur cara elemen ditampilkan (block, inline, flex, grid).</td>
+                            <td><button class="preview-btn" onclick="showPreview('display', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="position">
+                            <td>position</td>
+                            <td>Mengatur posisi elemen (static, relative, absolute, fixed).</td>
+                            <td><button class="preview-btn" onclick="showPreview('position', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="flex-direction">
+                            <td>flex-direction</td>
+                            <td>Menentukan arah item dalam flexbox (row, column).</td>
+                            <td><button class="preview-btn" onclick="showPreview('flex-direction', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="justify-content">
+                            <td>justify-content</td>
+                            <td>Menyelaraskan item secara horizontal dalam flexbox.</td>
+                            <td><button class="preview-btn" onclick="showPreview('justify-content', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="align-items">
+                            <td>align-items</td>
+                            <td>Menyelaraskan item secara vertikal dalam flexbox.</td>
+                            <td><button class="preview-btn" onclick="showPreview('align-items', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="gap">
+                            <td>gap</td>
+                            <td>Mengatur jarak antara item dalam flexbox atau grid.</td>
+                            <td><button class="preview-btn" onclick="showPreview('gap', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="border-radius">
+                            <td>border-radius</td>
+                            <td>Membuat sudut elemen menjadi melengkung (rounded).</td>
+                            <td><button class="preview-btn" onclick="showPreview('border-radius', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="box-shadow">
+                            <td>box-shadow</td>
+                            <td>Memberikan efek bayangan pada elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('box-shadow', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="opacity">
+                            <td>opacity</td>
+                            <td>Mengatur tingkat transparansi elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('opacity', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="cursor">
+                            <td>cursor</td>
+                            <td>Mengubah bentuk kursor saat berada di atas elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('cursor', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="filter">
+                            <td>filter</td>
+                            <td>Efek visual seperti blur, grayscale, atau brightness.</td>
+                            <td><button class="preview-btn" onclick="showPreview('filter', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="transform">
+                            <td>transform</td>
+                            <td>Mengubah bentuk/posisi elemen (rotate, scale, translate, skew).</td>
+                            <td><button class="preview-btn" onclick="showPreview('transform', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="transition">
+                            <td>transition</td>
+                            <td>Membuat perubahan properti menjadi halus (animasi transisi).</td>
+                            <td><button class="preview-btn" onclick="showPreview('transition', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="text-shadow">
+                            <td>text-shadow</td>
+                            <td>Memberikan bayangan pada teks.</td>
+                            <td><button class="preview-btn" onclick="showPreview('text-shadow', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="background-image">
+                            <td>background-image</td>
+                            <td>Mengatur gambar latar belakang.</td>
+                            <td><button class="preview-btn" onclick="showPreview('background-image', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="overflow">
+                            <td>overflow</td>
+                            <td>Mengatur konten yang melebihi ukuran elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('overflow', 'CSS')">Preview</button></td>
+                        </tr>
+                        <tr data-css="z-index">
+                            <td>z-index</td>
+                            <td>Mengatur urutan lapisan elemen.</td>
+                            <td><button class="preview-btn" onclick="showPreview('z-index', 'CSS')">Preview</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr style="margin: 50px 0; border: none; border-top: 2px solid #667eea;">
+            <p style="text-align: center; color: black; font-size: 14px; margin-top: 30px;">
+                Modul Pembelajaran Web Development | Informatika 📚<br>
+                Dibuat untuk memudahkan pembelajaran HTML dan CSS dengan Preview Interaktif
+            </p>
+        </section>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="previewTitle">Preview</h3>
+                <button class="close-btn" onclick="closePreview()">&times;</button>
+            </div>
+
+            <div class="preview-label">📺 Hasil Preview:</div>
+            <div class="preview-container" id="previewResult"></div>
+
+            <div class="preview-label">💻 Kode HTML/CSS:</div>
+            <div class="preview-code" id="previewCode"></div>
+        </div>
+    </div>
+    
+    <a href="index.html" class="back-btn"> < Kembali</a>
+        
+
+    <script src="informatika.js"></script>
+</body>
+
+</html>
