@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Editor HTML, CSS, dan JavaScript dengan preview langsung." />
+    <title>Code Tester — Code Editor</title>
+    <link rel="stylesheet" href="runcode.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Code Tester</p>
+          <h1>Code Editor</h1>
+          <p class="subtitle">Tulis HTML, CSS, dan JavaScript secara terpisah lalu lihat hasilnya di bawah.</p>
+        </div>
+      </header>
+
+      <section class="workspace" aria-label="Area kerja Code Editor">
+        <div class="panel editor-panel">
+          <div class="panel-heading">
+            <h2>Editor Kode</h2>
+            <div class="editor-actions">
+              <button id="reset-button" class="secondary-button" type="button">Reset contoh</button>
+              <button id="clear-button" class="clear-button" type="button">Hapus semua</button>
+              <button id="save-button" class="secondary-button" type="button">Simpan</button>
+              <button id="run-button" type="button"> ▶ </button>
+            </div>
+          </div>
+          <div class="editor-tabs" role="tablist" aria-label="Pilih bahasa kode">
+            <button class="editor-tab is-active" type="button" role="tab" aria-selected="true" data-language="html">HTML</button>
+            <button class="editor-tab" type="button" role="tab" aria-selected="false" data-language="css">CSS</button>
+            <button class="editor-tab" type="button" role="tab" aria-selected="false" data-language="js">JavaScript</button>
+            <button id="add-file-button" class="editor-tab add-file-tab" type="button" aria-label="Tambahkan file gambar, video, atau audio">+ File</button>
+            <input id="file-input" type="file" accept="image/*,video/*,audio/*" multiple hidden>
+          </div>
+          <label id="editor-label" class="sr-only" for="code-input">Tulis kode HTML di sini</label>
+          <textarea id="code-input" spellcheck="false" aria-describedby="editor-label editor-hint" placeholder="&lt;h1&gt;Halo dunia&lt;/h1&gt;"></textarea>
+          <ul id="asset-list" class="asset-list" aria-label="File tambahan"></ul>
+          <p id="editor-hint" class="hint">Preview diperbarui saat tombol Jalankan ditekan atau Ctrl/⌘ + Enter di editor.</p>
+        </div>
+
+        <div class="panel preview-panel">
+          <div class="panel-heading">
+            <h2>Preview</h2>
+            <div class="preview-actions">
+              <span id="status" class="status" aria-live="polite">Siap</span>
+              <button id="fullscreen-button" class="secondary-button" type="button" aria-label="Perbesar preview">Perbesar ⛶</button>
+            </div>
+          </div>
+          <iframe id="preview-frame" title="Preview kode" sandbox="allow-scripts"></iframe>
+          <pre id="log-output" class="log-output" aria-live="polite">Log JavaScript akan tampil di sini.</pre>
+        </div>
+      </section>
+    </main>
+    <script src="runcode.js"></script>
+  </body>
+</html>
