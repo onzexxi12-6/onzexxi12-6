@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,20 +23,20 @@
             --card-light: #ffffff;
             transition: background-color 0.3s, color 0.3s;
         }
-
+        
         /* Default Light Theme */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
         }
-
+        
         /* Dark Theme Class */
         body.dark-theme {
             background-color: var(--bg-dark);
             color: var(--text-light);
         }
-
+        
         /* Navbar Customization */
         .navbar {
             backdrop-filter: blur(10px);
@@ -48,6 +49,11 @@
         .navbar-brand {
             font-weight: 700;
             color: var(--primary-color) !important;
+        }
+        .navbar-brand-back {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            margin-left: 230px;
         }
         .nav-link {
             font-weight: 500;
@@ -67,7 +73,7 @@
         .nav-link:hover::after {
             width: 100%;
         }
-
+        
         /* Theme Toggle Button */
         #theme-toggle {
             cursor: pointer;
@@ -76,7 +82,7 @@
             font-size: 1.2rem;
             color: inherit;
         }
-
+        
         /* Hero Section */
         .hero {
             padding: 120px 0 80px 0;
@@ -97,7 +103,7 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
         }
-
+        
         /* Utility Styles */
         .text-primary-color {
             color: var(--primary-color);
@@ -131,7 +137,7 @@
             color: white;
             transform: translateY(-2px);
         }
-
+        
         /* Section Styling */
         section {
             padding: 80px 0;
@@ -152,7 +158,7 @@
             background-color: var(--primary-color);
             border-radius: 2px;
         }
-
+        
         /* Cards and Elements for Portfolio & Skills */
         .card-custom {
             background-color: var(--card-light);
@@ -180,7 +186,7 @@
             color: white;
             font-size: 3rem;
         }
-
+        
         /* Skills badges */
         .skill-badge {
             background-color: rgba(79, 70, 229, 0.1);
@@ -197,7 +203,7 @@
             color: white;
             transform: scale(1.05);
         }
-
+        
         /* Contact Section */
         .contact-icon {
             font-size: 1.5rem;
@@ -226,7 +232,7 @@
             color: var(--primary-color);
             transform: translateY(-3px);
         }
-
+        
         /* Footer */
         footer {
             background-color: #1e293b;
@@ -239,39 +245,55 @@
         }
     </style>
 </head>
+
 <body>
+
+
+    <!-- CONTROL MUSIK/AUDIO -->
+    <div class="music-wrap">
+        <button id="musicBtn">
+            <span class="btn-icon">🎵</span>
+            <span class="btn-text">Putar Musik</span>
+        </button>
+    </div>
+
+    <audio id="bgMusic" src="audio.mp3" autoplay loop></audio>
+
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#hero">Portofolio.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="#hero">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="#about">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="#skills">Keahlian</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="#projects">Proyek</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="#contact">Kontak</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <button id="theme-toggle" class="btn p-2" title="Ganti Tema">
-                            <i class="fas fa-moon" id="theme-icon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+            <a href="index.html" class="navbar-brand-back">
+                < Kembali</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="#hero">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="#about">Tentang</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="#skills">Keahlian</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="#projects">Proyek</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="#contact">Kontak</a>
+                            </li>
+                            <li class="nav-item ms-lg-3">
+                                <button id="theme-toggle" class="btn p-2" title="Ganti Tema">
+                                    <i class="fas fa-moon" id="theme-icon"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
         </div>
     </nav>
 
@@ -521,20 +543,20 @@
 
     <!-- Bootstrap JS Bundle CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Custom JavaScript for interactivity -->
     <script>
         // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
-
+        
         // Check local storage for preference
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-theme');
             themeIcon.className = 'fas fa-sun';
         }
-
+        
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-theme');
             const isDark = body.classList.contains('dark-theme');
@@ -548,14 +570,14 @@
                 localStorage.setItem('theme', 'light');
             }
         });
-
+        
         // Dynamic Typing Effect
         const words = ["Web Developer.", "UI/UX Designer.", "Problem Solver."];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
         const typedTextSpan = document.getElementById('typed-text');
-
+        
         function typeEffect() {
             const currentWord = words[wordIndex];
             if (isDeleting) {
@@ -565,12 +587,12 @@
                 typedTextSpan.textContent = currentWord.substring(0, charIndex + 1);
                 charIndex++;
             }
-
+        
             let typingSpeed = 100;
             if (isDeleting) {
                 typingSpeed /= 2; // Delete faster
             }
-
+        
             if (!isDeleting && charIndex === currentWord.length) {
                 typingSpeed = 1500; // Pause at full word
                 isDeleting = true;
@@ -579,15 +601,15 @@
                 wordIndex = (wordIndex + 1) % words.length;
                 typingSpeed = 500; // Pause before typing next word
             }
-
+        
             setTimeout(typeEffect, typingSpeed);
         }
-
+        
         // Start Typing Effect once page loads
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(typeEffect, 500);
         });
-
+        
         // Form submission handling (Mock up)
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', (e) => {
@@ -596,7 +618,7 @@
             alert(`Terima kasih, ${name}! Pesan Anda berhasil dikirim (hanya simulasi).`);
             contactForm.reset();
         });
-
+        
         // Smooth scroll adjustment for sticky navbar
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -608,12 +630,12 @@
                     const targetRect = target.getBoundingClientRect().top;
                     const targetPosition = targetRect - bodyRect;
                     const offsetPosition = targetPosition - offset;
-
+        
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
                     });
-
+        
                     // Close mobile menu if open
                     const navbarCollapse = document.getElementById('navbarNav');
                     if (navbarCollapse.classList.contains('show')) {
@@ -623,6 +645,61 @@
                 }
             });
         });
+        
+        window.addEventListener("load", () => {
+            const bgMusic = document.getElementById("bgMusic");
+        
+            if (!bgMusic) return;
+        
+            const savedTime = localStorage.getItem("musicTime");
+        
+            if (savedTime) {
+                bgMusic.currentTime = parseFloat(savedTime);
+            }
+        
+            setInterval(() => {
+                localStorage.setItem("musicTime", bgMusic.currentTime);
+            }, 1000);
+        });
+        
+        function startMusic() {
+          const music = document.getElementById("bgMusic");
+          music.play().catch(err => console.log(err));
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const musicBtn = document.getElementById('musicBtn');
+            const bgMusic = document.getElementById('bgMusic');
+            let isPlaying = false;
+            
+            // Cek apakah musik sudah autoplay
+            if (bgMusic && !bgMusic.paused) {
+                isPlaying = true;
+                musicBtn.classList.add('playing');
+                musicBtn.querySelector('.btn-icon').textContent = '🔊';
+                musicBtn.querySelector('.btn-text').textContent = 'Musik Diputar';
+            }
+            
+            musicBtn.addEventListener('click', function() {
+                if (!bgMusic) return;
+                
+                if (isPlaying) {
+                    bgMusic.pause();
+                    musicBtn.classList.remove('playing');
+                    musicBtn.querySelector('.btn-icon').textContent = '🎵';
+                    musicBtn.querySelector('.btn-text').textContent = 'Putar Musik';
+                } else {
+                    bgMusic.play().catch(err => {
+                        console.log('Autoplay diblokir, butuh interaksi user');
+                    });
+                    musicBtn.classList.add('playing');
+                    musicBtn.querySelector('.btn-icon').textContent = '🔊';
+                    musicBtn.querySelector('.btn-text').textContent = 'Musik Diputar';
+                }
+                isPlaying = !isPlaying;
+            });
+        });
     </script>
 </body>
+
 </html>

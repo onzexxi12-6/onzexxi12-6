@@ -237,3 +237,58 @@ input.addEventListener("keydown", (event) => {
 
 input.value = code.html;
 runCode();
+
+// CONTROL MUSIK/AUDIO
+window.addEventListener("load", () => {
+    const bgMusic = document.getElementById("bgMusic");
+
+    if (!bgMusic) return;
+
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+    }
+
+    setInterval(() => {
+        localStorage.setItem("musicTime", bgMusic.currentTime);
+    }, 1000);
+});
+
+function startMusic() {
+  const music = document.getElementById("bgMusic");
+  music.play().catch(err => console.log(err));
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const musicBtn = document.getElementById('musicBtn');
+    const bgMusic = document.getElementById('bgMusic');
+    let isPlaying = false;
+    
+    // Cek apakah musik sudah autoplay
+    if (bgMusic && !bgMusic.paused) {
+        isPlaying = true;
+        musicBtn.classList.add('playing');
+        musicBtn.querySelector('.btn-icon').textContent = '🔊';
+        musicBtn.querySelector('.btn-text').textContent = 'Musik Diputar';
+    }
+    
+    musicBtn.addEventListener('click', function() {
+        if (!bgMusic) return;
+        
+        if (isPlaying) {
+            bgMusic.pause();
+            musicBtn.classList.remove('playing');
+            musicBtn.querySelector('.btn-icon').textContent = '🎵';
+            musicBtn.querySelector('.btn-text').textContent = 'Putar Musik';
+        } else {
+            bgMusic.play().catch(err => {
+                console.log('Autoplay diblokir, butuh interaksi user');
+            });
+            musicBtn.classList.add('playing');
+            musicBtn.querySelector('.btn-icon').textContent = '🔊';
+            musicBtn.querySelector('.btn-text').textContent = 'Musik Diputar';
+        }
+        isPlaying = !isPlaying;
+    });
+});

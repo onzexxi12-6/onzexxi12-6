@@ -438,27 +438,6 @@ resetBtn.addEventListener('click', () => newGame());
 
 newGame();
 
-window.addEventListener("load", () => {
-    const bgMusic = document.getElementById("bgMusic");
-
-    if (!bgMusic) return;
-
-    const savedTime = localStorage.getItem("musicTime");
-
-    if (savedTime) {
-        bgMusic.currentTime = parseFloat(savedTime);
-    }
-
-    setInterval(() => {
-        localStorage.setItem("musicTime", bgMusic.currentTime);
-    }, 1000);
-});
-
-function startMusic() {
-  const music = document.getElementById("bgMusic");
-  music.play().catch(err => console.log(err));
-}
-
 // ===== THEME TOGGLE =====
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
@@ -489,6 +468,27 @@ document.addEventListener('DOMContentLoaded', function() {
         themeToggle.textContent = icon;
     }
 });
+
+window.addEventListener("load", () => {
+    const bgMusic = document.getElementById("bgMusic");
+
+    if (!bgMusic) return;
+
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+    }
+
+    setInterval(() => {
+        localStorage.setItem("musicTime", bgMusic.currentTime);
+    }, 1000);
+});
+
+function startMusic() {
+  const music = document.getElementById("bgMusic");
+  music.play().catch(err => console.log(err));
+}
 
 // ===== MUSIC CONTROL =====
 document.addEventListener('DOMContentLoaded', function() {
